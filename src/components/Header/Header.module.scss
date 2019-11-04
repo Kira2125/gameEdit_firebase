@@ -1,0 +1,66 @@
+ul li {
+  display: inline-block;
+}
+
+.logo {
+  height: 15vh;
+
+}
+
+.logo div {
+  text-align: center;
+}
+
+.img {
+  width: 230px;
+  height: 17vh;
+
+}
+
+header {
+  min-height: 15vh;
+  max-height: 35vh;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+
+}
+
+
+
+header nav ul {
+  list-style: none;
+
+  text-align: center;
+  padding: 0;
+
+}
+
+header nav ul li {
+  display: inline-block;
+  padding-right: 10vw;
+  margin-bottom: 5px;
+
+}
+
+header a {
+  display: block;
+  text-align: center;
+  padding: 0.8rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-top: 50px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.5s ease-in;
+
+}
+
+header a:hover {
+  color: deepskyblue;
+  text-decoration: none;
+}
+
+header ul li a {
+  font-size: 2vh;
+}

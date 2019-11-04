@@ -1,0 +1,116 @@
+.news .slider-carousel, .news, .news .slider-carousel li {
+  color: grey;
+  text-align: center;
+}
+
+.slider-carousel {
+
+  height: 80vh;
+}
+
+.slider-carousel li .izo1 {
+  background-image: url('../../images/NewsCarousel/1.jpg');
+  background-size: cover;
+  background-position: top center;
+  min-height: 40vh;
+  overflow: hidden;
+}
+
+.slider-carousel li .izo2 {
+  background-image: url('../../images/NewsCarousel/2.jpg');
+  background-size: cover;
+  background-position: top center;
+  min-height: 40vh;
+  overflow: hidden;
+}
+
+.slider-carousel li .izo3 {
+  background-image: url('../../images/NewsCarousel/4.jpg');
+  background-size: cover;
+  background-position: top center;
+  min-height: 40vh;
+  overflow: hidden;
+}
+
+.slider-carousel li .izo4 {
+  background-image: url('../../images/NewsCarousel/5.jpg');
+  background-size: cover;
+  background-position: top center;
+  min-height: 40vh;
+  overflow: hidden;
+}
+
+.slider-carousel li .izo5 {
+  background-image: url('../../images/NewsCarousel/6.jpg');
+  background-size: cover;
+  background-position: top center;
+  min-height: 40vh;
+  overflow: hidden;
+}
+
+.slider-carousel li .izo6 {
+  background-image: url('../../images/NewsCarousel/7.jpg');
+  background-size: cover;
+  background-position: top center;
+  min-height: 40vh;
+  overflow: hidden;
+}
+
+.slider-carousel li .izo7 {
+  background-image: url('../../images/NewsCarousel/8.jpg');
+  background-size: cover;
+  background-position: top center;
+  min-height: 40vh;
+  overflow: hidden;
+}
+
+.slider-carousel li .izo8 {
+  background-image: url('../../images/NewsCarousel/9.jpg');
+  background-size: cover;
+  background-position: top center;
+  min-height: 40vh;
+  overflow: hidden;
+}
+
+.slider-carousel li .izo9 {
+  background-image: url('../../images/NewsCarousel/wot.jpg');
+  background-size: cover;
+  background-position: top center;
+  min-height: 40vh;
+  overflow: hidden;
+}
+
+.slider-carousel li .izo10 {
+  background-image: url('../../images/NewsCarousel/1.png');
+  background-size: cover;
+  background-position: top center;
+  min-height: 40vh;
+  overflow: hidden;
+}
+
+.slider-carousel li .text {
+  text-align: center;
+  text-indent: 15px;
+}
+
+.slider-carousel li:hover {
+  background-color: orange;
+  color: white;
+  border-color: deepskyblue;
+  border-radius: 2%;
+}
+
+.slider-carousel li .text a {
+  text-decoration: none;
+  color: deepskyblue;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.news .head h1{
+  margin-top: 10vh;
+  font-weight: bold;
+  font-size: 50px;
+  color: deepskyblue;
+  margin-bottom: 5vh;
+}
