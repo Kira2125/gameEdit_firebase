@@ -1,13 +1,5 @@
-.img1 {
-    background-image: url('../../images/MainSlider/battle.jpg');
-    background-size: cover;
-    background-position: top center;
-    min-height: 100vh;
-    overflow: hidden;
-}
+.img {
 
-.img2 {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../images/MainSlider/creed.jpg');
     background-size: cover;
     background-position: top center;
     min-height: 100vh;
@@ -15,14 +7,6 @@
 }
 
 
-
-.img3 {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../images/MainSlider/batman.jpg');
-    background-size: cover;
-    background-position: top center;
-    min-height: 100vh;
-    overflow: hidden;
-}
 
 .slider, .slider ul, .slider ul li {
     height: 100vh;

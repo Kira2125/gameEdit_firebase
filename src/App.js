@@ -4,6 +4,7 @@ import Homepage from "./pages/homepage/Homepage.component";
 import {Route, Switch} from "react-router-dom";
 import Header from "./components/Header/Header.component";
 import 'bootstrap/dist/css/bootstrap.css';
+import AuthPage from "./pages/authpage/AuthPage.component";
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
             <Header/>
             <Switch>
                 <Route path='/' component={Homepage}/>
+                <Route path='/auth' component={AuthPage}/>
             </Switch>
         </div>
     );
