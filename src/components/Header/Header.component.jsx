@@ -1,10 +1,16 @@
 import React from 'react';
 import  logo from "../../images/new_logo.png";
 import css from './Header.module.scss';
-import {Link} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 
-const Header = () => (
-        <header>
+const Header = (props) => {
+    console.log(props);
+    let some = null;
+    if(props.location.pathname == "/auth") {
+        some = true;
+    }
+    return(
+        <header className={some ? css.header: null}>
             <nav>
                 <ul>
                     <li>
@@ -19,6 +25,7 @@ const Header = () => (
                 </ul>
             </nav>
         </header>
-);
+)
+}
 
-export default Header;
+export default withRouter(Header);

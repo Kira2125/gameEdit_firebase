@@ -1,8 +1,10 @@
 import React from 'react';
 import css from './AuthPage.module.scss';
 import SignIn from "../../components/SignIn/SignIn.component";
+import SignUp from "../../components/SignUp/SignUp.component";
 
-const AuthPage = () => {
+const AuthPage = (props) => {
+    console.log(props)
     return (
         <div className={css.authPage}>
             <SignIn/>

@@ -12,8 +12,8 @@ class App extends Component {
         <div className="App">
             <Header/>
             <Switch>
-                <Route path='/' component={Homepage}/>
-                <Route path='/auth' component={AuthPage}/>
+                <Route exact path='/' render={() => <Homepage/>}/>
+                <Route exact path='/auth' render={() => <AuthPage/>}/>
             </Switch>
         </div>
     );

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import css from './SignIn.module.scss';
+import FormInput from "../FormInput/FormInput.component";
+import CustomButton from "../CustomButton/CustomButton.component";
 
 
 class SignIn extends Component {
@@ -44,7 +46,7 @@ class SignIn extends Component {
                     />
                     <div className='buttons'>
                         <CustomButton type='submit'> Sign in </CustomButton>
-                        <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+                        <CustomButton  isGoogleSignIn>
                             Sign in with Google
                         </CustomButton>
                     </div>

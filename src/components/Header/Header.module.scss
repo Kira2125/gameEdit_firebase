@@ -18,14 +18,20 @@ ul li {
 }
 
 header {
-  min-height: 15vh;
-  max-height: 35vh;
+  height: 150px;
   position: absolute;
   z-index: 2;
   width: 100%;
 
 }
 
+.header {
+  background-color: orange;
+  position: relative;
+  height: 100px;
+  top: -40px;
+
+}
 
 
 header nav ul {
@@ -49,7 +55,7 @@ header a {
   padding: 0.8rem;
   text-decoration: none;
   font-size: 1.1rem;
-  margin-top: 50px;
+  margin-top: 5px;
   font-weight: bold;
   color: white;
   transition: all 0.5s ease-in;
