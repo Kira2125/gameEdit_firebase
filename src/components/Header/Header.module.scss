@@ -18,7 +18,8 @@ ul li {
 }
 
 header {
-  height: 150px;
+  min-height: 15vh;
+  max-height: 35vh;
   position: absolute;
   z-index: 2;
   width: 100%;
@@ -28,9 +29,6 @@ header {
 .header {
   background-color: orange;
   position: relative;
-  height: 100px;
-  top: -40px;
-
 }
 
 

@@ -5,6 +5,7 @@ import {Route, Switch} from "react-router-dom";
 import Header from "./components/Header/Header.component";
 import 'bootstrap/dist/css/bootstrap.css';
 import AuthPage from "./pages/authpage/AuthPage.component";
+import Footer from "./components/Footer/Footer.component";
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
                 <Route exact path='/' render={() => <Homepage/>}/>
                 <Route exact path='/auth' render={() => <AuthPage/>}/>
             </Switch>
+            <Footer/>
         </div>
     );
   }

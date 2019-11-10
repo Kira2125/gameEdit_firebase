@@ -4,7 +4,6 @@ import css from './Header.module.scss';
 import {Link, withRouter} from "react-router-dom";
 
 const Header = (props) => {
-    console.log(props);
     let some = null;
     if(props.location.pathname == "/auth") {
         some = true;

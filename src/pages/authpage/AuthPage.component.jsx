@@ -3,8 +3,8 @@ import css from './AuthPage.module.scss';
 import SignIn from "../../components/SignIn/SignIn.component";
 import SignUp from "../../components/SignUp/SignUp.component";
 
-const AuthPage = (props) => {
-    console.log(props)
+const AuthPage = () => {
+
     return (
         <div className={css.authPage}>
             <SignIn/>
