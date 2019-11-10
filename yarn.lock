@@ -2389,6 +2389,11 @@ capture-exit@^2.0.0:
   dependencies:
     rsvp "^4.8.4"
 
+caroufredsel@^6.2.1:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/caroufredsel/-/caroufredsel-6.2.1.tgz#b22b422594a2f1d561f2f3cb72698f625ccb705f"
+  integrity sha512-O9VLZwvh/p2yAD6P2mnH3nPlbJxg9LzgZM+9P6i+sCuprWpqcpOYXLuNwJw90JEkeVcrEDPYSsXFENCnK9s08Q==
+
 case-sensitive-paths-webpack-plugin@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.2.0.tgz#3371ef6365ef9c25fa4b81c16ace0e9c7dc58c3e"
@@ -5749,6 +5754,11 @@ jest@24.9.0:
   dependencies:
     import-local "^2.0.0"
     jest-cli "^24.9.0"
+
+jquery@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
+  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
 
 js-base64@^2.1.8:
   version "2.5.1"

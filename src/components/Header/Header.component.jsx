@@ -17,7 +17,7 @@ const Header = (props) => {
                             <div><img src={logo} className={css.img}/></div>
                         </div>
                     </li>
-                    <li><a href="">GAMES</a></li>
+                    <li><a href=""><Link to='/'>GAMES</Link></a></li>
                     <li><a href="">NEWS</a></li>
                     <li><a href="">BUY</a></li>
                     <li><a href=""><Link to='/auth'>SIGN IN</Link></a></li>
