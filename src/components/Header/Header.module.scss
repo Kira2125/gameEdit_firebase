@@ -3,7 +3,7 @@ ul li {
 }
 
 .logo {
-  height: 15vh;
+  height: 12vh;
 
 }
 
@@ -13,14 +13,14 @@ ul li {
 
 .img {
   width: 230px;
-  height: 17vh;
+  height: 13vh;
 
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  min-height: 15vh;
+  min-height: 13vh;
   max-height: 35vh;
   position: absolute;
   z-index: 2;
@@ -55,7 +55,7 @@ header a {
   padding: 0.8rem;
   text-decoration: none;
   font-size: 1.1rem;
-  margin-top: 5px;
+
   font-weight: bold;
   color: white;
   transition: all 0.5s ease-in;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './LastNews.styles.scss';
+import css from './LastNews.module.scss';
 import izo1 from "../../images/NewsCarousel/1.jpg";
 import izo2 from "../../images/NewsCarousel/2.jpg";
 import izo3 from "../../images/NewsCarousel/4.jpg";
@@ -11,6 +11,8 @@ import izo8 from "../../images/NewsCarousel/9.jpg";
 import izo9 from "../../images/NewsCarousel/wot.jpg";
 import izo10 from "../../images/NewsCarousel/1.png";
 import LastNewsPeace from "../LastNewsPeace/LastNewsPeace.component";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 
 class LastNews extends Component {
@@ -59,18 +61,36 @@ class LastNews extends Component {
                     id: 10},]
         }
     }
+
     render() {
+        const responsive = {
+            superLargeDesktop: {
+                // the naming can be any, depends on you.
+                breakpoint: { max: 4000, min: 3000 },
+                items: 5,
+            },
+            desktop: {
+                breakpoint: { max: 3000, min: 1024 },
+                items: 4,
+            },
+            tablet: {
+                breakpoint: { max: 1024, min: 464 },
+                items: 2,
+            },
+            mobile: {
+                breakpoint: { max: 464, min: 0 },
+                items: 1,
+            },
+        };
         return (
-            <div className="news">
-                <div className="head">
+            <div className={css.news}>
+                <div className={css.head}>
                     <h1>LAST NEWS</h1>
                 </div>
-                <ul className="slider-carousel">
-                    {this.state.lastNews.map((obj) => {return <li key={obj.id} ><LastNewsPeace lastNewsInfo={obj}/></li>})}
+                <Carousel  responsive={responsive} infinite={true}>
+                    {this.state.lastNews.map((obj) => {return <LastNewsPeace key={obj.id} lastNewsInfo={obj}/>})}
+                </Carousel>
 
-                </ul>
-                <a className="news_prev" id="foo1_prev" href="#"><span><i className="fas fa-arrow-left"></i></span></a>
-                <a className="news_next" id="foo1_next" href="#"><span><i className="fas fa-arrow-right"></i></span></a>
 
             </div>
         )

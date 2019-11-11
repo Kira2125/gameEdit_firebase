@@ -7,6 +7,8 @@ import img4 from '../../images/LastGames/l4.jpg';
 import img5 from '../../images/LastGames/l5.jpg';
 import img6 from '../../images/LastGames/l6.jpg';
 import LastGamesPeace from "../LastGamesPeace/LastGamesPeace.component";
+import $ from 'jquery';
+import jQuery from 'jquery';
 
 class LastGames extends Component {
     constructor() {
@@ -28,6 +30,16 @@ class LastGames extends Component {
     }
 
     render() {
+        jQuery(document).ready(function () {
+            "use strict";
+
+            $('.li-library li .limg').mouseover(function(){
+                var getImageLink = $(this).css("background-image");
+
+                $('.library').css("background-image", "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))," + getImageLink);
+            })
+        })
+
         return (
             <div className='library' style={{backgroundImage:
                     `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${this.state.lastGamesLib[5].image})`}}>

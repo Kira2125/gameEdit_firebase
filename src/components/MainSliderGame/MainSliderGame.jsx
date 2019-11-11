@@ -3,7 +3,9 @@ import css from "../MainSlider/MainSlider.module.scss";
 
 function MainSliderGame({gameInf}) {
     return (
-        <div>
+        <div style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${gameInf.image})`}} className={css.container}>
+
+                <div className={css.description}>
                 <h1><span>{gameInf.header}</span></h1>
                 <p>{gameInf.description}</p><br></br>
 
@@ -13,6 +15,7 @@ function MainSliderGame({gameInf}) {
 
                 <a href="" className={css.btnHalf}>PRE ORDER NOW</a>
                 <a href="" className={css.btnFull}>MORE GAMES FROM DICE</a>
+                </div>
         </div>
     )
 }

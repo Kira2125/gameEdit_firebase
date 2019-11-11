@@ -1,37 +1,33 @@
-.news .slider-carousel, .news, .news .slider-carousel li {
+.news  {
   color: grey;
   text-align: center;
 }
 
-.slider-carousel {
 
-  height: 80vh;
-}
-
-.slider-carousel li .izo {
+ .izo {
   background-size: cover;
   background-position: top center;
   min-height: 40vh;
   overflow: hidden;
 }
 
-.slider-carousel li .text {
+ .text {
   text-align: center;
   text-indent: 15px;
 }
 
-.slider-carousel li:hover {
+ .text:hover {
   background-color: orange;
   color: white;
   border-color: deepskyblue;
   border-radius: 2%;
 }
 
-.slider-carousel li .text a {
-  text-decoration: none;
+ .text a {
   color: deepskyblue;
   font-weight: bold;
   font-size: 20px;
+   text-decoration: none !important;
 }
 
 .news .head h1{

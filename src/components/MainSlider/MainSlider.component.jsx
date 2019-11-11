@@ -4,6 +4,8 @@ import MainSliderGame from "../MainSliderGame/MainSliderGame";
 import img1 from "../../images/MainSlider/battle.jpg";
 import img2 from "../../images/MainSlider/creed.jpg";
 import img3 from "../../images/MainSlider/batman.jpg";
+import {Carousel} from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 class MainSlider extends Component {
     constructor() {
@@ -17,15 +19,12 @@ class MainSlider extends Component {
     render() {
 
         return (
-            <div className={css.slider}>
-                <ul id="slider-carousel">
-                    {this.state.mainSliderGames.map((obj) => {return <li key={obj.id} className={css.img}
-                                                                         style={{backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${obj.image}`}}>
-                                                                        <MainSliderGame gameInf={obj}/></li>})}
-                </ul>
-                <a className={css.prev} id="foo2_prev" href="#"><span><i className="fas fa-arrow-left"></i></span></a>
-                <a className={css.next} id="foo2_next" href="#"><span><i className="fas fa-arrow-right"></i></span></a>
-            </div>
+            <Carousel className={css.carousel}
+                      showThumbs={false} infiniteLoop={true}
+                      showIndicators={false} showStatus={false}
+                      emulateTouch={true}>
+                   {this.state.mainSliderGames.map(obj => {return <MainSliderGame key={obj.id} gameInf={obj}/>})}
+            </Carousel>
         )
     }
 }

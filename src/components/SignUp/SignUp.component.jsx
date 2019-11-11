@@ -1,9 +1,8 @@
 import React from 'react';
-// import {createUserProfileDocument} from "../../firebase/firebase";
-// import {auth} from "../../firebase/firebase";
 import './SignUp.styles.scss';
 import CustomButton from "../CustomButton/CustomButton.component";
 import FormInput from "../FormInput/FormInput.component";
+import {auth, createUserProfileDocument} from "../../firebase/firebase";
 
 class SignUp extends React.Component{
     constructor(props){
@@ -24,19 +23,19 @@ class SignUp extends React.Component{
             return
         }
 
-        // try {
-        //     const {user} = await auth.createUserWithEmailAndPassword(email, password);
-        //     createUserProfileDocument(user, {displayName});
-        //
-        //     this.setState({
-        //         displayName: '',
-        //         email: '',
-        //         password: '',
-        //         confirmPassword: '',
-        //     })
-        // } catch (e) {
-        //     console.log(e);
-        // }
+        try {
+            const {user} = await auth.createUserWithEmailAndPassword(email, password);
+            createUserProfileDocument(user, {displayName});
+
+            this.setState({
+                displayName: '',
+                email: '',
+                password: '',
+                confirmPassword: '',
+            })
+        } catch (e) {
+            console.log(e);
+        }
     }
 
     handleChange= event => {
@@ -65,7 +64,7 @@ class SignUp extends React.Component{
                                value={confirmPassword} onChange={this.handleChange}
                                label='confirmPassword' required/>
 
-                    <CustomButton>SIGN UP</CustomButton>
+                    <CustomButton type='submit'>SIGN UP</CustomButton>
                 </form>
             </div>
         )
