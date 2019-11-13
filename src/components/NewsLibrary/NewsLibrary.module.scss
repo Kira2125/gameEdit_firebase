@@ -1,0 +1,49 @@
+.news  {
+  color: grey;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.block {
+  display: inline-block;
+  max-width: 600px;
+}
+
+.peace {
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+.izo {
+  background-size: cover;
+  background-position: top center;
+  min-height: 40vh;
+  overflow: hidden;
+}
+
+.text {
+  text-align: center;
+  text-indent: 15px;
+}
+
+.peace:hover {
+  background-color: orange;
+  color: white;
+  border-color: deepskyblue;
+  border-radius: 2%;
+}
+
+.text a {
+  color: deepskyblue;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none !important;
+}
+
+.news .head h1{
+  margin-top: 10vh;
+  font-weight: bold;
+  font-size: 50px;
+  color: deepskyblue;
+  margin-bottom: 5vh;
+}

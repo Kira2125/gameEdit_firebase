@@ -1,42 +1,48 @@
 .library{
-  margin-top: 10vh;
   height:100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../../images/LastGames/l6.jpg');
   background-size: cover;
   background-position: top center;
   text-align: center;
   overflow: hidden;
-
 }
 
-.li-head h1 {
-  text-align: center;
-  text-transform: uppercase;
+.details  {
+  padding: 5px;
+  text-decoration: none;
+  font-size: 1.1rem;
   font-weight: bold;
-  font-size: 5vh;
-  color: deepskyblue;
-  margin-top: 10vh;
+  color: white;
+  background-color: orange;
 }
 
-.li-library {
-  margin-top: 10vh;
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.liLibrary {
+  margin-top: 20vh;
   list-style: none;
 
 }
 
-.li-library li{
+.liLibrary li{
   display: inline-block;
   padding: 20px;
 
 }
 
-.li-library li:hover{
+.liLibrary li:hover{
   background-color: deepskyblue;
   border-radius: 5%;
   transition: all 0.7s ease-in;
 }
 
-.li-library li:hover .feature{
+.liLibrary li:hover .feature{
   background-color: deepskyblue;
   color: grey;
   transition: all 0.7s ease-in;
@@ -44,7 +50,7 @@
 
 
 
-.li-library li .feature{
+.liLibrary li .feature{
   background-color: white;
   color: grey;
   max-width: 400px;
@@ -60,19 +66,4 @@
   max-width: 400px;
   overflow: hidden;
 
-}
-
-.details  {
-  padding: 5px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: white;
-  background-color: orange;
-}
-
-
-.lastGameButtons {
-  display: flex;
-  justify-content: center;
 }

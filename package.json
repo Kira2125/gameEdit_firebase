@@ -2,10 +2,12 @@
   "name": "gameedit",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Kira2125.github.io/gameEdit",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "caroufredsel": "^6.2.1",
     "firebase": "^7.3.0",
+    "gh-pages": "^2.1.1",
     "jquery": "^3.4.1",
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
@@ -16,6 +18,7 @@
     "react-responsive-carousel": "^3.1.51",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
+    "react-stripe-checkout": "^2.6.3",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
@@ -25,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

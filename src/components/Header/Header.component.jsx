@@ -11,6 +11,8 @@ const Header = (props) => {
     let some = null;
     if(props.location.pathname == "/auth") {
         some = true;
+    } else if (props.location.pathname == "/news") {
+        some = true;
     }
     return(
         <header className={some ? css.header: null}>
@@ -21,9 +23,8 @@ const Header = (props) => {
                             <div> <Link to='/'><img src={logo} className={css.img}/></Link></div>
                         </div>
                     </li>
-                    <li><a href="">GAMES</a></li>
-                    <li><a href="">NEWS</a></li>
-                    <li><a href="">BUY</a></li>
+                    <li><a href=""><Link to='/games'>GAMES</Link></a></li>
+                    <li><a href=""><Link to='/news'>NEWS</Link></a></li>
                     {props.currentUser ? <li onClick={() => auth.signOut()}><a href="">SIGN OUT</a></li>
                         :<li><a href=""><Link to='/auth'>SIGN IN</Link></a></li>}
 

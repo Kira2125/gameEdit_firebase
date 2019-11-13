@@ -1,5 +1,5 @@
 import React from 'react';
-import './SignUp.styles.scss';
+import  css from './SignUp.module.scss'
 import CustomButton from "../CustomButton/CustomButton.component";
 import FormInput from "../FormInput/FormInput.component";
 import {auth, createUserProfileDocument} from "../../firebase/firebase";
@@ -47,10 +47,10 @@ class SignUp extends React.Component{
     render() {
         const {displayName, email, password, confirmPassword} = this.state;
         return (
-            <div className='sign-up'>
-                <h2 className='title'>I don't have the account</h2>
+            <div className={css.signUp}>
+                <h2 className={css.title}>I don't have the account</h2>
                 <span>Sign up with email and password</span>
-                <form onSubmit={this.handleSubmit} className='sign-up-form'>
+                <form onSubmit={this.handleSubmit} className={css.signUpForm}>
                     <FormInput type='text' name='displayName'
                                value={displayName} onChange={this.handleChange}
                                label='Display Name' required/>

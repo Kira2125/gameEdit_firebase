@@ -1,4 +1,8 @@
-
+.container {
+    background-size: cover;
+    background-position: top center;
+    overflow: hidden;
+}
 
 .container, .carousel {
     height: 100vh;
@@ -61,5 +65,7 @@
 .container a.btnFull:hover {
     opacity: 0.7;
 }
+
+
 
 

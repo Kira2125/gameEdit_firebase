@@ -11,6 +11,8 @@ import {setCurrentUser} from "./redux/user/user.actions";
 import {connect} from "react-redux";
 import {createStructuredSelector} from "reselect";
 import {auth, createUserProfileDocument} from "./firebase/firebase";
+import GamePage from "./pages/games/GamesPage";
+import NewsPage from "./pages/news/NewsPage.component";
 
 class App extends Component {
     unsubscribeFromAuth = null;
@@ -44,6 +46,8 @@ class App extends Component {
             <Switch>
                 <Route exact path='/' render={() => <Homepage/>}/>
                 <Route exact path='/auth' render={() => <AuthPage/>}/>
+                <Route path='/games' render={() => <GamePage/>}/>
+                <Route path='/news' render={() => <NewsPage/>}/>
             </Switch>
             <Footer/>
         </div>
