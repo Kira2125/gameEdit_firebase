@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/gameEdit/static/css/main.80756a12.chunk.css",
+    "main.css": "/gameEdit/static/css/main.03899ce2.chunk.css",
     "main.js": "/gameEdit/static/js/main.dddd4814.chunk.js",
     "main.js.map": "/gameEdit/static/js/main.dddd4814.chunk.js.map",
     "runtime-main.js": "/gameEdit/static/js/runtime-main.73cb52ca.js",
@@ -9,10 +9,10 @@
     "static/js/2.e185964f.chunk.js": "/gameEdit/static/js/2.e185964f.chunk.js",
     "static/js/2.e185964f.chunk.js.map": "/gameEdit/static/js/2.e185964f.chunk.js.map",
     "index.html": "/gameEdit/index.html",
-    "precache-manifest.2e7ebad1b7756315c5ff3378ef7d2c14.js": "/gameEdit/precache-manifest.2e7ebad1b7756315c5ff3378ef7d2c14.js",
+    "precache-manifest.a0d96b5f7ed8b2ee1ec2e27c4a26b983.js": "/gameEdit/precache-manifest.a0d96b5f7ed8b2ee1ec2e27c4a26b983.js",
     "service-worker.js": "/gameEdit/service-worker.js",
     "static/css/2.f28040ae.chunk.css.map": "/gameEdit/static/css/2.f28040ae.chunk.css.map",
-    "static/css/main.80756a12.chunk.css.map": "/gameEdit/static/css/main.80756a12.chunk.css.map",
+    "static/css/main.03899ce2.chunk.css.map": "/gameEdit/static/css/main.03899ce2.chunk.css.map",
     "static/media/LastGames.styles.scss": "/gameEdit/static/media/l6.365b356e.jpg",
     "static/media/new_logo.png": "/gameEdit/static/media/new_logo.1c559bdb.png",
     "static/media/styles.css": "/gameEdit/static/media/revicons.2feb69cc.eot"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.73cb52ca.js",
     "static/css/2.f28040ae.chunk.css",
     "static/js/2.e185964f.chunk.js",
-    "static/css/main.80756a12.chunk.css",
+    "static/css/main.03899ce2.chunk.css",
     "static/js/main.dddd4814.chunk.js"
   ]
 }
