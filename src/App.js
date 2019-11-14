@@ -48,6 +48,7 @@ class App extends Component {
                 <Route exact path='/auth' render={() => <AuthPage/>}/>
                 <Route path='/games' render={() => <GamePage/>}/>
                 <Route path='/news' render={() => <NewsPage/>}/>
+                <Route path='*' render={() => <Homepage/>}/>
             </Switch>
             <Footer/>
         </div>
