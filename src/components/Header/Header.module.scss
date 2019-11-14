@@ -15,7 +15,8 @@
 
 
 header {
-
+  display: flex;
+  justify-content: center;
   min-height: 13vh;
   max-height: 35vh;
   position: absolute;
