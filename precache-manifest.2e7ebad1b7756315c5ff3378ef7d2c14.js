@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0ffd5d7118638e1785ece3ac74e94899",
+    "revision": "027096928ad17d1547e396b90e05847b",
     "url": "/gameEdit/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gameEdit/static/css/2.f28040ae.chunk.css"
   },
   {
-    "revision": "992c865e2b4573543c4f",
+    "revision": "43f51b1c3b427ff266cb",
     "url": "/gameEdit/static/css/main.80756a12.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gameEdit/static/js/2.e185964f.chunk.js"
   },
   {
-    "revision": "992c865e2b4573543c4f",
-    "url": "/gameEdit/static/js/main.7cd22677.chunk.js"
+    "revision": "43f51b1c3b427ff266cb",
+    "url": "/gameEdit/static/js/main.dddd4814.chunk.js"
   },
   {
     "revision": "8ff5f25a0039cfa8595f",
