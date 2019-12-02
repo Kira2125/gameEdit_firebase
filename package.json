@@ -2,7 +2,7 @@
   "name": "gameedit",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Kira2125.github.io/gameEdit_firebase",
+  "homepage": "https://Kira2125.github.io/gameEdit",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "caroufredsel": "^6.2.1",
