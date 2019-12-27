@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import css from './MainSlider.module.scss';
 import MainSliderGame from "../MainSliderGame/MainSliderGame";
 import {Carousel} from "react-responsive-carousel";
@@ -7,11 +7,8 @@ import {shopSelectMainSlider} from "../../redux/shop/shop.selectors";
 import {createStructuredSelector} from "reselect";
 import {connect} from "react-redux";
 
-class MainSlider extends Component {
+const MainSlider = ({collection}) => {
 
-
-    render() {
-        const {collection} = this.props;
         return (
             <Carousel className={css.carousel}
                       showThumbs={false} infiniteLoop={true}
@@ -20,7 +17,6 @@ class MainSlider extends Component {
                    {collection.map(obj => {return <MainSliderGame key={obj.id} gameInf={obj}/>})}
             </Carousel>
         )
-    }
 }
 
 const mapStateToProps = createStructuredSelector({

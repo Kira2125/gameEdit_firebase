@@ -1,44 +1,26 @@
-import React, {Component} from 'react';
-import css from './NewsPage.module.scss';
-import {convertCollectionSnapshotToMap, firestore} from "../../firebase/firebase";
-import NewsLibrary from "../../components/NewsLibrary/NewsLibrary.component";
-import {createStructuredSelector} from "reselect";
-import {isLoadingSelector} from "../../redux/spinner/spinner.selectors";
-import {toggleSpinnerAC} from "../../redux/spinner/spinner.actions";
+import React, {useEffect} from 'react';
 import {connect} from "react-redux";
-import WithSpinner from "../../components/withSpinner/WithSpinner.component";
-import {updateCollectionsAC} from "../../redux/shop/shop.actions";
+import {fetchCollectionsStart} from "../../redux/shop/shop.actions";
+import ContainerNewsLibrary from "../../components/NewsLibrary/NewsLibarary.container.component";
 
 
-const NewsLibraryWithSpinner = WithSpinner(NewsLibrary);
 
-class NewsPage extends Component {
-    unsubscribeFromSnapshot = null;
-    componentDidMount() {
-        const {updateCollection, toggleLoading} = this.props;
-        const collectionRef = firestore.collection('collections');
-        this.unsubscribeFromSnapshot = collectionRef.get().then(snapshot => {
-            const collectionsMap = convertCollectionSnapshotToMap(snapshot);
-            updateCollection(collectionsMap);
-            toggleLoading(false);
-        })
-    }
-    render() {
+const NewsPage = ({fetchCollectionsStart}) => {
+        useEffect(() => {
+            fetchCollectionsStart();
+        }, [fetchCollectionsStart]);
+
         return (
             <div>
-                <NewsLibraryWithSpinner isLoading={this.props.isLoading}/>
+                <ContainerNewsLibrary/>
             </div>
         )
-    }
+
 }
 
-const mapStateToProps = createStructuredSelector({
-    isLoading: isLoadingSelector
-});
 
 const mapDispatchToProps = (dispatch) => ({
-    updateCollection: collectionMap => dispatch(updateCollectionsAC(collectionMap)),
-    toggleLoading: toggle => dispatch(toggleSpinnerAC(toggle)),
+    fetchCollectionsStart: () => dispatch(fetchCollectionsStart()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewsPage);
+export default connect(null, mapDispatchToProps)(NewsPage);

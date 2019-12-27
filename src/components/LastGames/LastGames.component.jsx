@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './LastGames.styles.scss';
 import LastGamesPeace from "../LastGamesPeace/LastGamesPeace.component";
 import $ from 'jquery';
@@ -7,9 +7,8 @@ import {createStructuredSelector} from "reselect";
 import {shopSelectGames} from "../../redux/shop/shop.selectors";
 import {connect} from "react-redux";
 
-class LastGames extends Component {
+const LastGames = ({collection}) => {
 
-    render() {
         jQuery(document).ready(function () {
             "use strict";
 
@@ -19,7 +18,6 @@ class LastGames extends Component {
                 $('.library').css("background-image", "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))," + getImageLink);
             })
         })
-        const {collection} = this.props;
         return (
 
             <div className='library' style={{backgroundImage:
@@ -32,7 +30,6 @@ class LastGames extends Component {
                 </ul>
             </div>
         )
-    }
 }
 
 const mapStateToProps = createStructuredSelector({

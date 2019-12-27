@@ -24,5 +24,16 @@ export const shopSelectNews = createSelector(
     collections => collections ? collections.news.items : null
 )
 
+export const selectFetching = createSelector(
+    [shopSelector],
+    shop => shop.isFetching
+)
+
+export const selectCollectionIsLoaded = createSelector(
+    [shopSelector],
+    shop => !!shop.collections
+)
+
+
 
 

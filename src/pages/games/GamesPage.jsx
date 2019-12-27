@@ -1,46 +1,27 @@
-import React, {Component} from 'react';
-import GameLibrary from "../../components/GameLibrary/GameLibrary.component";
-import  css from './GamesPage.module.scss';
+import React, {useEffect} from 'react';
 import {connect} from "react-redux";
-import {createStructuredSelector} from "reselect";
-import {isLoadingSelector} from "../../redux/spinner/spinner.selectors";
-import {updateCollectionsAC} from "../../redux/shop/shop.actions";
-import {toggleSpinnerAC} from "../../redux/spinner/spinner.actions";
-import {convertCollectionSnapshotToMap, firestore} from "../../firebase/firebase";
-import WithSpinner from "../../components/withSpinner/WithSpinner.component";
+import {fetchCollectionsStart} from "../../redux/shop/shop.actions";
+import ContainerGameLibrary from "../../components/GameLibrary/GameLibrary.container.component";
 
 
-const GamePageWithSpinner = WithSpinner(GameLibrary);
 
-class GamePage extends Component {
-    unsubscribeFromSnapshot = null;
-    componentDidMount() {
-        const {updateCollection, toggleLoading} = this.props;
-        const collectionRef = firestore.collection('collections');
-        this.unsubscribeFromSnapshot = collectionRef.get().then(snapshot => {
-            const collectionsMap = convertCollectionSnapshotToMap(snapshot);
-            updateCollection(collectionsMap);
-            toggleLoading(false);
-        })
-    }
+const GamePage = ({fetchCollectionsStart}) => {
 
-    render() {
+            useEffect(() => {
+                fetchCollectionsStart();
+            }, [fetchCollectionsStart]);
 
         return (
             <div>
-                <GamePageWithSpinner isLoading={this.props.isLoading}/>
+                <ContainerGameLibrary/>
             </div>
         )
-    }
+
 }
 
-const mapStateToProps = createStructuredSelector({
-    isLoading: isLoadingSelector
-});
 
 const mapDispatchToProps = (dispatch) => ({
-    updateCollection: collectionMap => dispatch(updateCollectionsAC(collectionMap)),
-    toggleLoading: toggle => dispatch(toggleSpinnerAC(toggle)),
+    fetchCollectionsStart: () => dispatch(fetchCollectionsStart()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(GamePage);
+export default connect(null, mapDispatchToProps)(GamePage);

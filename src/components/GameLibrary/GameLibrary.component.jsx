@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import css from './GameLibrary.module.scss';
 import {connect} from "react-redux";
 import {createStructuredSelector} from "reselect";
@@ -6,10 +6,8 @@ import {shopSelectGames} from "../../redux/shop/shop.selectors";
 import TheGame from "../TheGame/TheGame.component";
 
 
-class GameLibrary extends Component {
-    render() {
-        const {collection} = this.props;
-        console.log(collection);
+const GameLibrary = ({collection}) => {
+
         return (
             <div className={css.library} style={{backgroundImage:
                     `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${collection[6].Url})`}}>
@@ -18,7 +16,6 @@ class GameLibrary extends Component {
                 </ul>
             </div>
         )
-    }
 }
 
 const mapStateToProps = createStructuredSelector({

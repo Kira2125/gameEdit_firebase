@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import css from './LastNews.module.scss';
 import LastNewsPeace from "../LastNewsPeace/LastNewsPeace.component";
 import Carousel from "react-multi-carousel";
@@ -8,9 +8,8 @@ import {createStructuredSelector} from "reselect";
 import {shopSelectNews} from "../../redux/shop/shop.selectors";
 
 
-class LastNews extends Component {
+const LastNews = ({news}) => {
 
-    render() {
         const responsive = {
             superLargeDesktop: {
                 breakpoint: { max: 4000, min: 3000 },
@@ -29,7 +28,6 @@ class LastNews extends Component {
                 items: 1,
             },
         };
-        const {news} = this.props;
         return (
 
             <div className={css.news}>
@@ -43,7 +41,7 @@ class LastNews extends Component {
 
             </div>
         )
-    }
+
 }
 
 const mapStateToProps = createStructuredSelector({
